@@ -29,8 +29,8 @@ export default function Hero() {
                         ✨ $7.5M seeds round raised
                     </div>
                 </div>
-                <h1 className="text-6xl md:7xl lg:8xl font-medium text-center mt-6 " >Impactful design, created effortlessly</h1>
-                <p className="text-center text-xl text-white/50 mt-8 max-w-2xl">Design tools should nit slow dowm. Layers combine powerful features with an intuitive interface that keeps you in a creative flow.</p>
+                <h1 className="text-6xl md:7xl lg:8xl font-medium text-center mt-6 max-w-4xl mx-auto" >Impactful design, created effortlessly</h1>
+                <p className="text-center text-xl text-white/50 mt-8 max-w-2xl mx-auto">Design tools should nit slow dowm. Layers combine powerful features with an intuitive interface that keeps you in a creative flow.</p>
                 <form className="flex border border-white/15 rounded-full p-2 mt-8 max-w-lg mx-auto">
                     <input
                         type="email"
