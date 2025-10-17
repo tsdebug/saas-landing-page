@@ -58,10 +58,10 @@ export default function Features() {
                             </Avatar>
                             <Avatar className="-ml-6 border-transparent group-hover:border-green-500">
                                 <div className="size-full bg-neutral-700 rounded-full inline-flex items-center justify-center gap-1 relative">
-                                    <Image 
-                                    src={avatar4} 
-                                    alt="Avatar 4" 
-                                    className="absolute size-full rounded-full opacity-0 group-hover:opacity-100 transition"
+                                    <Image
+                                        src={avatar4}
+                                        alt="Avatar 4"
+                                        className="absolute size-full rounded-full opacity-0 group-hover:opacity-100 transition"
                                     />
                                     {Array.from({ length: 3 }).map((_, i) => (
                                         <span
@@ -84,13 +84,13 @@ export default function Features() {
                                 We&apos;ve achived{" "}
                                 <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent relative">
                                     <span>incredible</span>
-                                    <video 
-                                    src="/assets/gif-incredible.mp4" 
-                                    autoPlay 
-                                    loop 
-                                    muted 
-                                    playsInline 
-                                    className="absolute bottom-full left-1/2 -translate-x-1/4 rounded-2xl shadow-xl opacity-0 pointer-events-none group-hover:opacity-100 duration-500 transition"/>
+                                    <video
+                                        src="/assets/gif-incredible.mp4"
+                                        autoPlay
+                                        loop
+                                        muted
+                                        playsInline
+                                        className="absolute bottom-full left-1/2 -translate-x-1/4 rounded-2xl shadow-xl opacity-0 pointer-events-none group-hover:opacity-100 duration-500 transition" />
                                 </span>{" "}
                                 growth this year
                             </p>
@@ -100,12 +100,14 @@ export default function Features() {
                     <FeatureCard
                         title="Keyboard Quick Actions"
                         description="Powerful commands to help you create designs more quickly"
-                        className="md:cols-span-2 lg:cols-span-1 lg:col-start-auto md:col-start-2"
+                        className="md:cols-span-2 lg:cols-span-1 lg:col-start-auto md:col-start-2 group"
                     >
                         <div className="aspect-video flex items-center justify-center gap-4">
-                            <Key className="w-28">shift</Key>
-                            <Key>alt</Key>
-                            <Key>C</Key>
+                            <Key className="w-28 outline outline-2 outline-offset-4 outline-transparent group-hover:outline-lime-400 duration-500 transition-all group-hover:translate-y-1">shift</Key>
+
+                            <Key className="outline outline-2 outline-offset-4 outline-transparent group-hover:outline-lime-400 duration-500 transition-all group-hover:translate-y-1 delay-150">alt</Key>
+
+                            <Key className="outline outline-2 outline-offset-4 outline-transparent group-hover:outline-lime-400 duration-500 transition-all group-hover:translate-y-1 delay-300">C</Key>
                         </div>
                     </FeatureCard>
                 </div>
