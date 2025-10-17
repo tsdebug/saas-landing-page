@@ -20,7 +20,7 @@ export default function Introduction() {
     const wordProgress = useTransform(scrollYProgress, [0, 1], [0, words.length]);
 
     useEffect(() => {
-        // Floor to get discrete steps, and unsubscribe on cleanup
+        // Floor to get discrete steps
         const unsub = wordProgress.on("change", (v) => {
             setCurrentWord(Math.floor(v)); // cumulative highlight
         });
