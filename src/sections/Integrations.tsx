@@ -11,12 +11,36 @@ import IntegrationColumn from "@/components/IntegrationColumn";
 
 
 const integrations = [
-    { name: "Figma", icon: figmaIcon, description: "Figma is a collaborative interface design tool." },
-    { name: "Notion", icon: notionIcon, description: "Notion is an all-in-one workspace for notes and docs." },
-    { name: "Slack", icon: slackIcon, description: "Slack is a powerful team communication platform." },
-    { name: "Relume", icon: relumeIcon, description: "Relume is a no-code website builder and design system." },
-    { name: "Framer", icon: framerIcon, description: "Framer is a professional website prototyping tool." },
-    { name: "GitHub", icon: githubIcon, description: "GitHub is the leading platform for code collaboration." },
+    { 
+        name: "Figma",
+        icon: figmaIcon, 
+        description: "Figma is a collaborative interface design tool." 
+    },
+    { 
+        name: "Notion", 
+        icon: notionIcon, 
+        description: "Notion is an all-in-one workspace for notes and docs." 
+    },
+    { 
+        name: "Slack", 
+        icon: slackIcon, 
+        description: "Slack is a powerful team communication platform." 
+    },
+    { 
+        name: "Relume", 
+        icon: relumeIcon, 
+        description: "Relume is a no-code website builder and design system." 
+    },
+    { 
+        name: "Framer", 
+        icon: framerIcon, 
+        description: "Framer is a professional website prototyping tool." 
+    },
+    { 
+        name: "GitHub", 
+        icon: githubIcon, 
+        description: "GitHub is the leading platform for code collaboration." 
+    },
 ];
 
 export type IntegrationsType = typeof integrations;
@@ -35,6 +59,7 @@ export default function Integrations() {
                         <div className="h-[400px] lg:h-[800px] mt-8 lg:mt-0 overflow-hidden grid md:grid-cols-2 gap-4 [mask-image:linear-gradient(to_bottom, transparent, black_10%, black_90%, transparent)]">
                             <IntegrationColumn integrations={integrations} />
                             <IntegrationColumn integrations={integrations.slice().reverse()}
+                                reverse
                                 className="hidden md:flex"
                             />
                         </div>
