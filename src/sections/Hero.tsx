@@ -46,7 +46,7 @@ export default function Hero() {
 
 
     return (
-        <section className="py-24 overflow-x-clip" style={{cursor: `url(${cursorYouImage.src}), auto`}}>
+        <section className="py-24 overflow-x-clip" style={{ cursor: `url(${cursorYouImage.src}), auto` }}>
             <div className="container relative">
 
                 <motion.div
@@ -69,7 +69,7 @@ export default function Hero() {
 
                 <motion.div
                     ref={rightDesignScope}
-                    initial={{ opacity: 0, x:100, y:100 }}
+                    initial={{ opacity: 0, x: 100, y: 100 }}
                     drag
                     className="absolute -right-64 -top-16 hidden lg:block">
                     <Image
@@ -78,10 +78,10 @@ export default function Hero() {
                         alt="Design Example 2 Image" />
                 </motion.div>
 
-                <motion.div 
-                ref={rightPointerScope} 
-                initial={{ opacity:0, x: 275, y:100 }}
-                className="absolute right-80 -top-4 hidden lg:block">
+                <motion.div
+                    ref={rightPointerScope}
+                    initial={{ opacity: 0, x: 275, y: 100 }}
+                    className="absolute right-80 -top-4 hidden lg:block">
                     <Pointer name="Bryan" color="red" />
                 </motion.div>
 

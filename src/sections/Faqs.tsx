@@ -32,18 +32,18 @@ export default function Faqs() {
     // const selectedIndex = 0;
     const [selectedIndex, setSelectedIndex] = useState(0);
     return (
-        <section className="py-24">
+        <section id="faqs" className="py-24">
             <div className="container">
                 <div className="flex justify-center">
-                <Tag>Faqs</Tag>
+                    <Tag>Faqs</Tag>
                 </div>
                 <h2 className="text-6xl font-medium mt-6 text-center max-w-xl mx-auto">
                     Questions? We&apos;ve got <span className="text-lime-400">answers</span>
                 </h2>
                 <div className="mt-12 flex flex-col gap-6 max-w-xl mx-auto">
-                    {faqs.map((faq, faqIndex) =>(
+                    {faqs.map((faq, faqIndex) => (
                         <div key={faq.question} className="bg-neutral-900 rounded-2xl border border-white/10 p-6">
-                            <div className="flex justify-between items-center" onClick={()=> setSelectedIndex(faqIndex)}>
+                            <div className="flex justify-between items-center" onClick={() => setSelectedIndex(faqIndex)}>
                                 <h3 className="font-medium">{faq.question}</h3>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -55,8 +55,8 @@ export default function Faqs() {
                                     strokeWidth="2"
                                     strokeLinecap="round"
                                     strokeLinejoin="round"
-                                    className={twMerge("feather feather-plus text-lime-400 flex-shrink-0 transition duration-300", 
-                                        selectedIndex === faqIndex && 
+                                    className={twMerge("feather feather-plus text-lime-400 flex-shrink-0 transition duration-300",
+                                        selectedIndex === faqIndex &&
                                         "rotate-45")}
                                 >
                                     <line x1="12" y1="5" x2="12" y2="19"></line>
@@ -64,21 +64,21 @@ export default function Faqs() {
                                 </svg>
                             </div>
                             <AnimatePresence>
-                            {selectedIndex === faqIndex && (
-                                <motion.div 
-                                initial={{
-                                    height:0, marginTop:0,
-                                }}
-                                animate={{
-                                    height:"auto", marginTop:24,
-                                }}
-                                exit={{
-                                    height:0, marginTop:0,
-                                }}
-                                className={twMerge("overflow-hidden")}>
-                            <p className="text-white/50">{faq.answer}</p>
-                            </motion.div>
-                            )}
+                                {selectedIndex === faqIndex && (
+                                    <motion.div
+                                        initial={{
+                                            height: 0, marginTop: 0,
+                                        }}
+                                        animate={{
+                                            height: "auto", marginTop: 24,
+                                        }}
+                                        exit={{
+                                            height: 0, marginTop: 0,
+                                        }}
+                                        className={twMerge("overflow-hidden")}>
+                                        <p className="text-white/50">{faq.answer}</p>
+                                    </motion.div>
+                                )}
                             </AnimatePresence>
                         </div>
                     ))}
